@@ -90,14 +90,5 @@ public static class Bob
         return false;
     }
 
-    static bool IsLowerCaseQuestion(string input)
-    {
-        var pattern = new Regex(@"[a-z]\w\?");
-        var match = pattern.Match(input);
-
-        if (match.Success)
-            return true;
-
-        return false;
-    }
+    private static bool IsLowerCaseQuestion(string input) => Regex.IsMatch(input, @"[a-z]\w\?");
 }
