@@ -18,6 +18,9 @@ public static class Bob
         response.Add(2, "Sure.");
         response.Add(3, "Fine. Be that way!");
 
+        if (ContainsNewLine(statement) == true)
+            return response[0].ToString();
+
         if (IsAllUpperCaseLettersOnly(statement) == true)
             return response[1].ToString();
 
@@ -48,5 +51,7 @@ public static class Bob
     private static bool IsLowerCaseQuestion(string input) => Regex.IsMatch(input, @"[a-z]\w\?");
 
     private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
+
+    private static bool ContainsNewLine(string input) => Regex.IsMatch(input, @"\n");
 
 }
