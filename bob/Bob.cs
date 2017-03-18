@@ -21,6 +21,9 @@ public static class Bob
         if (ContainsNewLine(statement) == true)
             return response[0].ToString();
 
+        if (IsQuestionMarkNotAtEndOfSentence(statement) == true)
+            return response[0].ToString();
+
         if (IsAllUpperCaseLettersOnly(statement) == true)
             return response[1].ToString();
 
@@ -78,4 +81,5 @@ public static class Bob
         return false;
     }
 
+    private static bool IsQuestionMarkNotAtEndOfSentence(string input) => Regex.IsMatch(input, @"\s\?\s");
 }
