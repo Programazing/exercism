@@ -18,31 +18,31 @@ public static class Bob
         response.Add(2, "Sure.");
         response.Add(3, "Fine. Be that way!");
 
-        if (ContainsNewLine(statement) == true)
+        if (ContainsNewLine(statement))
             return response[0].ToString();
 
-        if (IsQuestionMarkNotAtEndOfSentence(statement) == true)
+        if (IsQuestionMarkNotAtEndOfSentence(statement))
             return response[0].ToString();
 
-        if (IsAllUpperCaseLettersOnly(statement) == true)
+        if (IsAllUpperCaseLettersOnly(statement))
             return response[1].ToString();
 
-        if (IsAllUpperCaseLettersAndSymbols(statement) == true)
+        if (IsAllUpperCaseLettersAndSymbols(statement))
             return response[1].ToString();
 
-        if (ContainsANumberBeforeAWordAndExclamationPoint(statement) == true)
+        if (ContainsANumberBeforeAWordAndExclamationPoint(statement))
             return response[1].ToString();
 
-        if (ContainsNumberAndQuestionMark(statement) == true)
+        if (ContainsNumberAndQuestionMark(statement))
             return response[2].ToString();
 
-        if (IsLowerCaseQuestion(statement) == true)
+        if (IsLowerCaseQuestion(statement))
             return response[2].ToString();
 
-        if (ContainsThreeOrMoreSentences(statement) == true)
+        if (ContainsThreeOrMoreSentences(statement))
             return response[2].ToString();
 
-        if (IsStringNullEmptyOrAllWhiteSpace(statement) == true)
+        if (IsStringNullEmptyOrAllWhiteSpace(statement))
             return response[3].ToString();
 
 
