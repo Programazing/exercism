@@ -7,7 +7,7 @@ public static class Bob
 {
     static void Main(string[] args)
     {
-        Hey("WATCH OUT!");
+        Hey("Wait! Hang on. Are you going to be OK?");
     }
 
     public static string Hey(string statement)
@@ -67,27 +67,11 @@ public static class Bob
 
     private static bool ContainsThreeOrMoreSentences(string input)
     {
-        string[] sentences = Regex.Split(input, @"[\.\!\?]");
-        int count = 0;
+        string[] sentences = input.Split(new[] { '.', '!', '?' });
 
-        foreach (string sentence in sentences)
-        {
-            count++;
-        }
-
-        if (count >= 3)
-            return true;
-
-        return false;
+        return sentences.Count() >= 3;
     }
 
     private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
 
-    
-
-    
-
-    
-
-    
 }
