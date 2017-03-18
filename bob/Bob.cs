@@ -49,21 +49,21 @@ public static class Bob
         return response[0].ToString();
     }
 
+    private static bool ContainsNewLine(string input) => Regex.IsMatch(input, @"\n");
+
+    private static bool IsQuestionMarkNotAtEndOfSentence(string input) => Regex.IsMatch(input, @"\s\?\s");
+
     private static bool IsAllUpperCaseLettersOnly(string input) => Regex.IsMatch(input, @"^([A-Z]+\s*)+$");
 
     private static bool IsAllUpperCaseLettersAndSymbols(string input) => Regex.IsMatch(input, @"^([A-Z]+\s*)+\W$");
 
-    private static bool HasDoubleWhiteSpaceAfterWord(string input) => Regex.IsMatch(input, @"\w\s\s");
+    private static bool ContainsANumberBeforeAWordAndExclamationPoint(string input) => Regex.IsMatch(input, @"([0-9])+\s*\w*\!");
 
     private static bool ContainsNumberAndQuestionMark(string input) => Regex.IsMatch(input, @"\d\?");
 
     private static bool IsLowerCaseQuestion(string input) => Regex.IsMatch(input, @"[a-z]\w\?");
 
-    private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
-
-    private static bool ContainsNewLine(string input) => Regex.IsMatch(input, @"\n");
-
-    private static bool ContainsANumberBeforeAWordAndExclamationPoint(string input) => Regex.IsMatch(input, @"([0-9])+\s*\w*\!");
+    private static bool HasDoubleWhiteSpaceAfterWord(string input) => Regex.IsMatch(input, @"\w\s\s");
 
     private static bool ContainsThreeOrMoreSentences(string input)
     {
@@ -81,5 +81,13 @@ public static class Bob
         return false;
     }
 
-    private static bool IsQuestionMarkNotAtEndOfSentence(string input) => Regex.IsMatch(input, @"\s\?\s");
+    private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
+
+    
+
+    
+
+    
+
+    
 }
