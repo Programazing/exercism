@@ -36,6 +36,9 @@ public static class Bob
         if (IsLowerCaseQuestion(statement) == true)
             return response[2].ToString();
 
+        if (ContainsThreeOrMoreSentences(statement) == true)
+            return response[2].ToString();
+
         if (IsStringNullEmptyOrAllWhiteSpace(statement) == true)
             return response[3].ToString();
 
@@ -58,5 +61,21 @@ public static class Bob
     private static bool ContainsNewLine(string input) => Regex.IsMatch(input, @"\n");
 
     private static bool ContainsANumberBeforeAWordAndExclamationPoint(string input) => Regex.IsMatch(input, @"([0-9])+\s*\w*\!");
+
+    private static bool ContainsThreeOrMoreSentences(string input)
+    {
+        string[] sentences = Regex.Split(input, @"[\.\!\?]");
+        int count = 0;
+
+        foreach (string sentence in sentences)
+        {
+            count++;
+        }
+
+        if (count >= 3)
+            return true;
+
+        return false;
+    }
 
 }
