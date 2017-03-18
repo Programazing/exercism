@@ -30,14 +30,8 @@ public static class Bob
         if (IsLowerCaseQuestion(statement) == true)
             return response[2].ToString();
 
-        //if (HasDoubleWhiteSpaceAfterWord(statement) == true)
-        //    return response[2].ToString();
-
-        //if (IsStringEmpty(statement) == true)
-        //    return response[3].ToString();
-
-        //if (IsFourWhiteSpaces(statement) == true)
-        //    return response[2].ToString();
+        if (IsStringNullEmptyOrAllWhiteSpace(statement) == true)
+            return response[3].ToString();
 
 
         return response[0].ToString();
@@ -52,4 +46,7 @@ public static class Bob
     private static bool ContainsNumberAndQuestionMark(string input) => Regex.IsMatch(input, @"\d\?");
 
     private static bool IsLowerCaseQuestion(string input) => Regex.IsMatch(input, @"[a-z]\w\?");
+
+    private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
+
 }
