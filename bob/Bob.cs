@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -7,11 +6,6 @@ namespace Exercism.Bob
 {
     public static class Bob
     {
-        static void Main(string[] args)
-        {
-            Hey("Wait! Hang on. Are you going to be OK?");
-        }
-
         public static string Hey(string statement)
         {
             string whatever = "Whatever.";
