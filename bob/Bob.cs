@@ -12,41 +12,40 @@ public static class Bob
 
     public static string Hey(string statement)
     {
-        Dictionary<int, string> response = new Dictionary<int, string>();
-        response.Add(0, "Whatever.");
-        response.Add(1, "Whoa, chill out!");
-        response.Add(2, "Sure.");
-        response.Add(3, "Fine. Be that way!");
+        string whatever = "Whatever.";
+        string chillOut = "Whoa, chill out!";
+        string sure = "Sure.";
+        string fine = "Fine. Be that way!";
 
         if (ContainsNewLine(statement))
-            return response[0].ToString();
+            return whatever;
 
         if (IsQuestionMarkNotAtEndOfSentence(statement))
-            return response[0].ToString();
+            return whatever;
 
         if (IsAllUpperCaseLettersOnly(statement))
-            return response[1].ToString();
+            return chillOut;
 
         if (IsAllUpperCaseLettersAndSymbols(statement))
-            return response[1].ToString();
+            return chillOut;
 
         if (ContainsANumberBeforeAWordAndExclamationPoint(statement))
-            return response[1].ToString();
+            return chillOut;
 
         if (ContainsNumberAndQuestionMark(statement))
-            return response[2].ToString();
+            return sure;
 
         if (IsLowerCaseQuestion(statement))
-            return response[2].ToString();
+            return sure;
 
         if (ContainsThreeOrMoreSentences(statement))
-            return response[2].ToString();
+            return sure;
 
         if (IsStringNullEmptyOrAllWhiteSpace(statement))
-            return response[3].ToString();
+            return fine.ToString();
 
 
-        return response[0].ToString();
+        return whatever;
     }
 
     private static bool ContainsNewLine(string input) => Regex.IsMatch(input, @"\n");
