@@ -27,6 +27,9 @@ public static class Bob
         if (IsAllUpperCaseLettersAndSymbols(statement) == true)
             return response[1].ToString();
 
+        if (ContainsANumberBeforeAWordAndExclamationPoint(statement) == true)
+            return response[1].ToString();
+
         if (ContainsNumberAndQuestionMark(statement) == true)
             return response[2].ToString();
 
@@ -53,5 +56,7 @@ public static class Bob
     private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
 
     private static bool ContainsNewLine(string input) => Regex.IsMatch(input, @"\n");
+
+    private static bool ContainsANumberBeforeAWordAndExclamationPoint(string input) => Regex.IsMatch(input, @"([0-9])+\s*\w*\!");
 
 }
