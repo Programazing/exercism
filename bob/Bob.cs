@@ -57,16 +57,7 @@ public static class Bob
 
     }
 
-    static bool IsAllUpperCaseLettersAndSymbols(string input)
-    {
-        var pattern = new Regex(@"^([A-Z]+\s*)+\W$");
-        var match = pattern.Match(input);
-
-        if (match.Success)
-            return true;
-
-        return false;
-    }
+    private static bool IsAllUpperCaseLettersAndSymbols(string input) => Regex.IsMatch(input, @"^([A-Z]+\s*)+\W$");
 
     private static bool HasDoubleWhiteSpaceAfterWord(string input) => Regex.IsMatch(input, @"\w\s\s");
 
