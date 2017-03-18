@@ -43,19 +43,7 @@ public static class Bob
         return response[0].ToString();
     }
 
-
-
-    static bool IsAllUpperCaseLettersOnly(string input)
-    {
-        var pattern = new Regex(@"^([A-Z]+\s*)+$");
-        var match = pattern.Match(input);
-
-        if (match.Success)
-            return true;
-
-        return false;
-
-    }
+    private static bool IsAllUpperCaseLettersOnly(string input) => Regex.IsMatch(input, @"^([A-Z]+\s*)+$");
 
     private static bool IsAllUpperCaseLettersAndSymbols(string input) => Regex.IsMatch(input, @"^([A-Z]+\s*)+\W$");
 
