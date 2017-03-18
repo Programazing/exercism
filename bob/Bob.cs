@@ -64,12 +64,7 @@ public static class Bob
 
     private static bool HasDoubleWhiteSpaceAfterWord(string input) => Regex.IsMatch(input, @"\w\s\s");
 
-    private static bool ContainsThreeOrMoreSentences(string input)
-    {
-        string[] sentences = input.Split(new[] { '.', '!', '?' });
-
-        return sentences.Count() >= 3;
-    }
+    private static bool ContainsThreeOrMoreSentences(string input) => input.Split(new[] { '.', '!', '?' }).Count() >= 3;
 
     private static bool IsStringNullEmptyOrAllWhiteSpace(string input) => String.IsNullOrWhiteSpace(input);
 
