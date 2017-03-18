@@ -79,16 +79,7 @@ public static class Bob
         return false;
     }
 
-    static bool ContainsNumberAndQuestionMark(string input)
-    {
-        var pattern = new Regex(@"\d\?");
-        var match = pattern.Match(input);
-
-        if (match.Success)
-            return true;
-
-        return false;
-    }
+    private static bool ContainsNumberAndQuestionMark(string input) => Regex.IsMatch(input, @"\d\?");
 
     private static bool IsLowerCaseQuestion(string input) => Regex.IsMatch(input, @"[a-z]\w\?");
 }
