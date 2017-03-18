@@ -29,7 +29,7 @@ public static class Bob
         if (IsAllUpperCaseLettersAndSymbols(statement))
             return chillOut;
 
-        if (ContainsANumberBeforeAWordAndExclamationPoint(statement))
+        if (Contains_A_Number_Before_A_Word_And_ExclamationPoint(statement))
             return chillOut;
 
         if (ContainsNumberAndQuestionMark(statement))
@@ -56,7 +56,7 @@ public static class Bob
 
     private static bool IsAllUpperCaseLettersAndSymbols(string input) => Regex.IsMatch(input, @"^([A-Z]+\s*)+\W$");
 
-    private static bool ContainsANumberBeforeAWordAndExclamationPoint(string input) => Regex.IsMatch(input, @"([0-9])+\s*\w*\!");
+    private static bool Contains_A_Number_Before_A_Word_And_ExclamationPoint(string input) => Regex.IsMatch(input, @"([0-9])+\s*\w*\!");
 
     private static bool ContainsNumberAndQuestionMark(string input) => Regex.IsMatch(input, @"\d\?");
 
