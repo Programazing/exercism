@@ -8,7 +8,7 @@
     <ProjectGuid>{B59ABA02-DBE4-4337-98FA-AB6D0E17035C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Exercism</RootNamespace>
-    <AssemblyName>bob</AssemblyName>
+    <AssemblyName>Exercism</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
