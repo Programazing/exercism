@@ -68,16 +68,7 @@ public static class Bob
         return false;
     }
 
-    private static bool HasDoubleWhiteSpaceAfterWord(string input)
-    {
-        var pattern = new Regex(@"\w\s\s");
-        var match = pattern.Match(input);
-
-        if (match.Success)
-            return true;
-
-        return false;
-    }
+    private static bool HasDoubleWhiteSpaceAfterWord(string input) => Regex.IsMatch(input, @"\w\s\s");
 
     private static bool ContainsNumberAndQuestionMark(string input) => Regex.IsMatch(input, @"\d\?");
 
