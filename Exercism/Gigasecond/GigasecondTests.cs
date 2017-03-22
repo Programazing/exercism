@@ -3,6 +3,7 @@ using Xunit;
 
 namespace Exercism.Gigasecond
 {
+    [Trait("Category", "Gigaseconds")]
     public class GigasecondTests
     {
         [Fact]
