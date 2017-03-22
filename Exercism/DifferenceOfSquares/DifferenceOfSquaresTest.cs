@@ -3,6 +3,7 @@ using Xunit;
 
 public class DifferenceOfSquaresTests
 {
+    [Trait("Category", "DifferenceOfSquares")]
     [Fact]
     public void Test_square_of_sums_to_5()
     {
