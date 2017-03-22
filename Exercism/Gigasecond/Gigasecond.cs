@@ -4,6 +4,6 @@ namespace Exercism.Gigasecond
 {
     public static class Gigasecond
     {
-        public static DateTime addGigasecond(DateTime birthDate) => birthDate.AddSeconds(1000000000);
+        public static DateTime AddGigasecond(DateTime birthDate) => birthDate.AddSeconds(1000000000);
     }
 }
