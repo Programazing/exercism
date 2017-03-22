@@ -2,6 +2,7 @@
 
 namespace Exercism.Bob
 {
+    [Trait("Category", "Bob")]
     public class BobTest
     {
         [Fact]
