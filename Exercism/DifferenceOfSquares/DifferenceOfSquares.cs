@@ -21,8 +21,5 @@ public static class Squares
         return sum;
     }
 
-    public static int DifferenceOfSquares(int max)
-    {
-        throw new NotImplementedException("You need to implement this function.");
-    }
+    public static double DifferenceOfSquares(int max) => SquareOfSums(max) - SumOfSquares(max);
 }
