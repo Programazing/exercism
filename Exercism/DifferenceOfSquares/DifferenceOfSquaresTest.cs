@@ -24,7 +24,7 @@ namespace Exercism.DifferenceOfSquaresTests
             Assert.Equal(170, Squares.DifferenceOfSquares(5));
         }
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void Test_square_of_sums_to_10()
         {
             Assert.Equal(3025, Squares.SquareOfSums(10));
@@ -42,7 +42,7 @@ namespace Exercism.DifferenceOfSquaresTests
             Assert.Equal(2640, Squares.DifferenceOfSquares(10));
         }
 
-        [Fact(Skip = "Remove to run test")]
+        [Fact]
         public void Test_square_of_sums_to_100()
         {
             Assert.Equal(25502500, Squares.SquareOfSums(100));
