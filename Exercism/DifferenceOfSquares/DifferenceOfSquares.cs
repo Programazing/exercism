@@ -4,7 +4,7 @@ using System.Linq;
 
 public static class Squares
 {
-    public static double SquareOfSums(int max) => Math.Pow(Enumerable.Range(0, max + 1).Sum(), 2);
+    public static double SquareOfSums(int max) => Math.Pow(Enumerable.Range(1, max).Sum(), 2);
 
     public static int SumOfSquares(int max)
     {
