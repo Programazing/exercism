@@ -62,11 +62,14 @@
   <ItemGroup>
     <Compile Include="Bob\BobTests.cs" />
     <Compile Include="Bob\Bob.cs" />
+    <Compile Include="DifferenceOfSquares\DifferenceOfSquares.cs" />
+    <Compile Include="DifferenceOfSquares\DifferenceOfSquaresTest.cs" />
     <Compile Include="Gigasecond\Gigasecond.cs" />
     <Compile Include="Gigasecond\GigasecondTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DifferenceOfSquares\DifferenceOfSquares_ReadMe.md" />
     <None Include="Gigasecond\Gigasecond_ReadMe.md" />
     <None Include="packages.config" />
   </ItemGroup>
